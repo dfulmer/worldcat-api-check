@@ -2,6 +2,7 @@ from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2Session
 from requests.auth import HTTPBasicAuth
 from requests import Session
+import json
 
 # Source for wskeys https://platform.worldcat.org/wskey/
 
@@ -21,6 +22,10 @@ token = oauth.fetch_token(token_url=token_url, auth=auth, include_client_id=True
 
 print("Here is the token:\n")
 print(token)
+
+print("Here is the token just formatted:\n")
+json_token = json.dumps(token, indent=4)
+print(json_token)
 
 s = Session()
 s.headers.update({"Authorization": f'Bearer {token["access_token"]}'})

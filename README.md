@@ -18,7 +18,11 @@ docker-compose up -d
 ```
 
 ## Run the program
+In order for it to work, you need to fill in the client_id and client_secret variables. Remove this:
+[Add client id here]
+[add client secret here]
+And add you client id and client secret. 
 
 ```
-docker-compose run --rm app python [etc.]
+docker-compose run --rm app python helloworldcat.py
 ```
