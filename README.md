@@ -26,3 +26,5 @@ And add you client id and client secret.
 ```
 docker-compose run --rm app python helloworldcat.py
 ```
+
+This should print out 1. the token 2. a formatted view of the token and 3. the MARCXML record for the bib with OCLC number 1354771677.
